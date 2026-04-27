@@ -27,7 +27,7 @@ test.describe('Login Functionality', () => {
   test('Test case 2: Negative username test', async ({ page }) => {
     await page.getByLabel('Username').fill('incorrectUser');
     await page.getByLabel('Password').fill('Password123');
-    await page.getByRole('button', { name: 'Submit' }).click();
+    await page.getByRole('link', { name: 'Submit' }).click();
 
     // Verify error message is displayed
     const errorMsg = page.locator('#error'); // Common ID for errors on this site
